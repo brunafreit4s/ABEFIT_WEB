@@ -1,0 +1,657 @@
+html, body
+{
+    height: 100%;
+    min-height: 100%;
+    margin: 0px;
+}
+
+*
+{
+    padding: 0;
+    margin-left: 0;
+    }
+
+header
+{
+    width: 100%;
+}
+
+    header nav
+    {
+        width: 100%;
+        margin: 1px auto;
+        background: #024959;
+    }
+
+.menu_bar
+{
+    display: none;
+}
+
+header nav ul
+{
+    overflow: hidden;
+    list-style: none;
+}
+
+    header nav ul li
+    {
+        float: left;
+    }
+
+        header nav ul li a
+        {
+            color: #fff;
+            padding: 20px;
+            display: block;
+            text-decoration: none;
+        }
+
+        header nav ul li span
+        {
+            margin-right: 10px;
+        }
+
+        header nav ul li a:hover
+        {
+            background: #037E8C;
+        }
+
+section
+{
+    padding: 20px;
+}
+
+@media screen and (max-width:800px )
+{
+    header nav
+    {
+        width: 80%;
+        height: 100%;
+        left: -100%;
+        margin: 0;
+        position: fixed;
+    }
+
+        header nav ul li
+        {
+            display: block;
+            float: none;
+            border-bottom: 1px solid rgba(255,255,255, .3);
+        }
+
+    .menu_bar
+    {
+        display: block;
+        width: 100%;
+        background: #ccc;
+    }
+
+        .menu_bar .bt-menu
+        {
+            display: block;
+            padding: 20px;
+            background: #024959;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 25px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .menu_bar span
+        {
+            float: right;
+            font-size: 40px;
+        }
+}
+
+footer
+{
+    width: 100%;
+    height: 112px;
+}
+
+    footer nav
+    {
+        width: 100%;
+        margin: 20px auto;
+        background: #024959;
+        height: 97px;
+    }
+
+        footer nav ul
+        {
+            overflow: hidden;
+            list-style: none;
+            height: 98px;
+        }
+
+            footer nav ul li
+            {
+                float: left;
+                height: 94px;
+            }
+
+                footer nav ul li a
+                {
+                    color: #fff;
+                    padding: 20px;
+                    display: block;
+                    text-decoration: none;
+                }
+
+                footer nav ul li span
+                {
+                    margin-right: 10px;
+                }
+
+                footer nav ul li a:hover
+                {
+                    background: #037E8C;
+                }
+
+@media screen and (max-width:800px )
+{
+    footer nav
+    {
+        width: 80%;
+        height: 100%;
+        left: -100%;
+        margin: 0;
+        position: fixed;
+    }
+
+        footer nav ul li
+        {
+            display: block;
+            float: none;
+            border-bottom: 1px solid rgba(255,255,255, .3);
+        }
+}
+
+#Topo
+{
+    width: 100%;
+}
+
+#Logo
+{
+    position: static;
+    width: 100%;
+}
+
+#formulario
+{
+    position: absolute;
+    float: right;
+    width:18%;
+    left: 81%;
+    top:5%;
+}
+
+#btSair
+{
+    position: absolute;
+    float: right;
+    left: 85%;
+    top: 30%;
+    width: 15%;
+    height: 60px;
+}
+
+#iconesTopo
+{
+    position: absolute;
+    text-align: left;
+    float: left;
+    width: 25%;
+    left: 30px;
+    top: 80px;
+}
+
+
+h4
+{
+    font-size: 18px;
+    font-family: Buxton Sketch;
+}
+
+h5
+{
+    font-size: 28px;
+    font-family: Buxton Sketch;
+    color: white;
+}
+
+h3
+{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: orange;
+}
+
+i
+{
+    font-size: 15px;
+    color: white;
+    font-family: sans-serif;
+    text-align: left;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+b
+{
+    padding: 15px;
+    background: #024959;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#Banner {
+    width: 100%;
+    background-color: #024959;
+    text-align: center;
+}
+
+#Galeria
+{
+    position: static;
+    float: left;
+    width: 50%;
+}
+
+#GaleriaModalidades
+{
+    position:absolute;
+    text-align: center;
+    top:150%;
+    right:5%;
+}
+
+#espaco
+{
+    position: static;
+    float: right;
+    text-align: center;
+    width: 50%;
+    height: 50px;
+}
+
+#esconde
+{
+    display: none;
+}
+
+#foto1
+{
+    text-align: center;
+    width: 100%;
+}
+
+#foto2
+{
+    position: static;
+    float: right;
+    width: 100%;
+}
+
+#foto3
+{
+    position: relative;
+    text-align:center;
+    top: 50%;
+    width:100%;
+    height:35%;
+}
+
+
+#datagridAluno
+{
+    position: relative;
+    float: left;
+    left: 0%;
+    width: 100%;
+    text-align: center;
+    height: 120px;
+    top: 0px;
+}
+
+#datagrid
+{
+    position: relative;
+    float: left;
+    left:25%;
+    top:20%;
+    text-align: center;
+    height: 538px;
+    width: 708px;
+}
+
+
+#DataModalidade
+{
+    position: relative;
+    float: left;
+    left:20%;
+    width:50%;
+    top: 3%;
+    text-align: center;
+}
+
+#DataPlano
+{
+    position: relative;
+    float: left;
+    left:25%;
+    width:50%;
+    top: 10%;
+    text-align: center;
+}
+
+#dadosAluno
+{
+    position: relative;
+    float: left;
+    left: 2%;
+    height: 146px;
+    width: 1169px;
+}
+
+#TextoHome
+{
+    position: relative;
+    float: right;
+    text-align:center;
+    width: 50%;
+    right:1%;
+    height: 350px;
+    background-color: #024959;
+}
+
+#TextoHome2
+{
+    position: relative;
+    float: right;
+    text-align: center;
+    width: 50%;
+    right:1%;
+    height: 220px;
+    background-color: #024959;
+}
+
+#TextoModalidade
+{
+    position: absolute;
+    float: left;
+    text-align: left;
+    width: 800px;
+    right: 10%;
+    height: 500px;
+    background-color: #3CB371;
+    padding: 20px;
+}
+
+#TextoModalidade2
+{
+    position: static;
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    background-color: #024959;
+    color: #006400;
+}
+
+#TextoMensagem
+{
+    position: static;
+    float: right;
+    text-align: center;
+    width: 50%;
+    right: 30%;
+    height: 297px;
+    background-color: #024959;
+}
+
+#TextoContato
+{
+    position: static;
+    text-align: center;
+    width: 100%;
+    right: 30%;
+    height: 1025px;
+    background-color: #024959;
+}
+
+#TextoSobre
+{
+    position: static;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: #024959;
+}
+
+#textoAluno
+{
+    position: static;
+    text-align: center;
+    right: 30%;
+}
+
+#btnInfo{
+    text-align:center;
+}
+
+#imgMensagem {
+    position: absolute;
+    text-align: left;
+    float: left;
+    width: 10%;
+    top:95%;
+    left: 5%;
+}
+
+#imgCaneta 
+{
+    position:absolute;
+    left:10%;
+    top:85%;
+}
+
+#txtEnder {
+    position:relative;
+    text-align:left;
+    left:20%;
+    width:40%;
+}
+
+#TextoMensagem2
+{
+    position:absolute;
+    text-align:left;
+    width:90%;
+    height:85%;
+    left:5%;
+    background-color:lemonchiffon;
+}
+
+#imgResposta {
+    position:absolute;
+    text-align:left;
+    float: left;
+    width:10%;
+    top:155%;
+    left:5%;
+}
+
+#imgFunc {
+    position:absolute;
+    left:2%;
+    top:150%;
+}
+
+#Mensagem{
+    position:absolute;
+    text-align:left;
+    width:50%;
+    top:75%;
+    left:25%;
+    height:55%;
+    background-color:lemonchiffon;
+}
+
+#Resposta {
+    position:absolute;
+    text-align:left;
+    width:50%;
+    top:135%;
+    left:25%;
+    height:55%;
+    background-color:azure;
+}
+
+#TextoResposta {
+    position:absolute;
+    width:90%;
+    left:5%;
+    height:50%;
+    background-color:azure;
+}
+
+#ComboMens {
+    position:absolute;
+    left:5%;
+
+}
+
+
+#contMens {
+    position:static;
+    text-align:center;
+    width:100%;
+    height:100%;
+}
+
+
+#infAluno {
+    position:relative;
+    text-align:left;
+    width:80%;
+    left:15%; 
+    top:10%;
+}
+
+#infAluno1 {
+    position:relative;
+    text-align:center;
+    width:70%;
+    left:15%; 
+    top:10%;
+}
+
+#lbEsquerda {
+    position:relative;
+    text-align:left;
+    width:27%;
+    height:50%;
+    left:2%;
+}
+
+#imgCentro {
+    position:absolute;
+    text-align:center;
+    width:80%;
+    left:15%;
+    top:80%;
+}
+
+#lbDireita {
+    position:relative;
+    text-align:right;
+    width:23%;
+    left:70%;
+}
+
+#btAtualiza
+{
+    position:absolute;
+    left:40%;
+    top:5%;
+}
+
+#FormSenha {
+    position:relative;
+    left:10%;
+    width:50%;
+    text-align:right;
+}
+
+#PlanoAluno 
+{
+    position:absolute;
+    left:50%;
+    width:49%;
+    height:380px;
+    top: 3px;
+}
+
+#lbPlano 
+{
+    position:absolute;
+    right:125%;
+    text-align:left;
+    top:28%;
+    width: 82px;
+}
+
+#divEnder {
+    position:relative;
+    width:90%;
+    left:5%;
+}
+
+#divDadosP {
+    position:relative;
+    left:1%;
+    width:60%;
+
+}
+
+#txtDados {
+    position:relative;
+    left:9%;
+    width:30%;
+    top: 0px;
+}
+
+#Hr {
+    position:absolute;
+    right:40%;
+}
+
+#ComboBox {
+    position:absolute;
+    top:70%;
+    left:25%;
+}
+
+#SemMensagemFunc {
+    position:absolute;
+    text-align:center;
+    left:25%;
+}
+
+#SemMensagemAlu {
+    position:absolute;
+    text-align:center;
+    left:10%;
+}

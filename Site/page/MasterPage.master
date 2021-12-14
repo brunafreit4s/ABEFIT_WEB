@@ -1,0 +1,184 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="page_MasterPage" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>ABEFIT</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+        <link rel="stylesheet" type="text/css" href="../css/estilo.css" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        <script type="text/javascript" src="../js/JavaScript.js"></script>
+        <link rel="icon" href="../img/peso.png"/>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+
+        <header>
+
+            <div id="Topo">
+                <br />
+                <br />
+                <div id="iconesTopo">
+                    <a href="https://www.facebook.com/">
+                        <img src="../img/face.png" width="15%" /></a>
+                    <br />
+                    <br />
+                    <a href="https://www.instagram.com/">
+                        <img src="../img/insta.png" width="15%" /></a>
+                    <br />
+                    <br />
+                    <a href="https://twitter.com/">
+                        <img src="../img/twee.png" width="15%" /></a>
+                </div>
+
+                <div id="formulario" runat="server">
+                    <asp:Label runat="server" Text="Login:" Font-Names="Calibri Light" ForeColor="#006666"></asp:Label>
+                    &nbsp;&nbsp;<asp:TextBox ID="txtLogin" runat="server" BackColor="#009999"
+                        Height="20px" Width="170px" ForeColor="White" ValidationGroup="validarTxt()"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Label runat="server" Text="Senha:" Font-Names="Calibri Light" ForeColor="#006666"></asp:Label>
+                    &nbsp;<asp:TextBox ID="txtSenha" runat="server" TextMode="Password" BackColor="#009999"
+                        Height="20px" Width="170px" ForeColor="White" ValidationGroup="validarTxt()"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:ImageButton runat="server" ID="btnEnviar" ImageUrl="~/img/seta.png" ImageAlign="Left"
+                        OnClick="Enviar_Click" OnClientClick="validarTxt()" ValidationGroup="logando" />
+
+                    <br />
+                    <br />
+                    <br />
+                    <asp:Label runat="server" ID="txtResposta" ForeColor="Red" Font-Size="Medium"></asp:Label>
+
+                </div>
+
+                <div id="btSair">
+
+                    <asp:ImageButton runat="server" ID="btnSair" ImageUrl="~/img/setaSair.png" ImageAlign="Left"
+                        OnClick="btnSair_Click" OnClientClick="validarTxt()" ValidationGroup="logando" Visible="False" />
+                    <br />
+                    &nbsp;&nbsp;<asp:Label runat="server" ID="txtSair" Visible="False" Font-Size="Large" ForeColor="#009999">Sair.</asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label runat="server" ID="txtEmail" Visible="False" Font-Size="Large" ForeColor="#009999">Seja Bem Vindo!</asp:Label>
+
+                </div>
+
+                <div id="Logo">
+                    <img src="../img/logotipo2.jpg" width="100%"></img>
+                </div>
+
+                <div class="menu_bar">
+                    <a href="#" class="bt-menu">Menu</a>
+                </div>
+
+                <nav id="menuNormal" runat="server">
+                    <ul>
+                        <li><a href="index.aspx">
+                            <img src="../img/home_menu.png" width="24px">&nbsp;&nbsp;Início</img></a>
+                        </li>
+                        <li><a href="sobre.aspx">
+                            <img src="../img/people.png" width="24px">&nbsp;&nbsp;Sobre Nós</img></a>
+                        </li>
+                        <li><a href="modalidades.aspx">
+                            <img src="../img/peso.png" width="24px">&nbsp;&nbsp;Modalidades</img></a>
+                        </li>
+                        <li><a href="planos.aspx">
+                            <img src="../img/pacotes.png" width="24px">&nbsp;&nbsp;Planos</img></a></li>
+                        <li><a href="contatos.aspx">
+                            <img src="../img/contatos_menu.png" width="24px">&nbsp;&nbsp;Contatos</img></a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav id="menuAluno" runat="server">
+                    <ul>
+                        <li><a href="index.aspx">
+                            <img src="../img/home_menu.png" width="24px">&nbsp;&nbsp;Início</img></a></li>
+                        <li><a href="alunoindex.aspx">
+                            <img src="../img/dadosaluno.png" width="24px">&nbsp;&nbsp;Dados Pessoais</img></a></li>
+                        <li><a href="sobre.aspx">
+                            <img src="../img/people.png" width="24px">&nbsp;&nbsp;Sobre Nós</img></a>
+                        </li>
+                        <li><a href="modalidades.aspx">
+                            <img src="../img/peso.png" width="24px">&nbsp;&nbsp;Modalidades</img></a></li>
+                        <li><a href="planos.aspx">
+                            <img src="../img/pacotes.png" width="24px">&nbsp;&nbsp;Planos</img></a></li>
+                        <li><a href="grade.aspx">
+                            <img src="../img/gradehorario.png" width="24px">&nbsp;&nbsp;Grade de Horários</img></a>
+                        </li>
+                        <li><a href="contatos.aspx">
+                            <img src="../img/contatos_menu.png" width="24px">&nbsp;&nbsp;Contatos</img></a>
+                        </li>
+                        <li><a href="mensagem.aspx">
+                            <img src="../img/letter.png" width="24px">&nbsp;&nbsp;Mensagem</img></a>
+                        </li>
+                        <li><a href="medidas.aspx">
+                            <img src="../img/medida.png" width="24px">&nbsp;&nbsp;Medidas</img></a>
+                        </li>
+                    </ul>
+                </nav>
+        </header>
+
+        <article style="height: 1024px; text-align: left;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </article>
+
+        <footer>
+
+            <div class="menu_bar" runat="server">
+                <a href="#" class="bt-menu">Rodapé</a>
+            </div>
+
+            <nav id="rodapeNormal" runat="server">
+                <ul>
+                    <li><a href="index.aspx">
+                        <img src="../img/home.png" width="50px"></img></a></li>
+                    <li><a href="sobre.aspx">
+                        <img src="../img/sobre.png" width="50px"></img></a></li>
+                    <li><a href="modalidades.aspx">
+                        <img src="../img/modalidades.png" width="50px"></img></a></li>
+                    <li><a href="planos.aspx">
+                        <img src="../img/planos2.png" width="50px"></img></a></li>
+                    <li><a href="contatos.aspx">
+                        <img src="../img/contatos.png" width="50px"></img></a></li>
+
+                    <br />
+                    <br />
+                    <li><b>Início | Sobre Nós | Modalidades | Planos | Contatos </b>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav id="rodapeAluno" runat="server">
+                <ul>
+                    <li><a href="index.aspx">
+                        <img src="../img/home.png" width="50px"></img></a></li>
+                    <li><a href="alunoindex.aspx">
+                        <img src="../img/dados.png" width="50px"></img></a></li>
+                    <li><a href="sobre.aspx">
+                        <img src="../img/sobre.png" width="50px"></img></a></li>
+                    <li><a href="modalidades.aspx">
+                        <img src="../img/modalidades.png" width="50px"></img></a></li>
+                    <li><a href="planos.aspx">
+                        <img src="../img/planos2.png" width="50px"></img></a></li>
+                    <li><a href="grade.aspx">
+                        <img src="../img/horarios.png" width="50px"></img></a></li>
+                    <li><a href="contatos.aspx">
+                        <img src="../img/contatos.png" width="50px"></img></a></li>
+
+                    <br />
+                    <br />
+                    <li><b>Início | Dados | Sobre | Modalidades | Planos | Grade de Horário | Contatos</b>
+                    </li>
+                </ul>
+            </nav>
+
+        </footer>
+    </form>
+</body>
+</html>
