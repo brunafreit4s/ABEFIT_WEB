@@ -1,31 +1,28 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/page/MasterPage.master" AutoEventWireup="true" CodeFile="mensagem.aspx.cs" Inherits="page_mensagem" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link rel="stylesheet" type="text/css" href="../css/estilo.css" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <script type="text/javascript" src="../js/JavaScript.js"></script>
-
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-   
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="contMens">
         <br />
         <br />
-
-       
 
         <div id="imgMensagem">
             <asp:Image runat="server" ImageUrl="~/img/note.png" Width="128px" />
         </div>
 
         <div id="imgCaneta">
-            <asp:Image runat="server" ImageUrl="~/img/caneta.png" Width ="128px" />
+            <asp:Image runat="server" ImageUrl="~/img/caneta.png" Width="128px" />
         </div>
 
         <div id="Mensagem">
             <br />
             <br />
+
             <div id="TextoMensagem2">
                 <div id="SemMensagemAlu">
                     <asp:Label ID="lbTexto" runat="server" Visible="false" Text="Ainda não nos Enviou uma Mensagem" Font-Size="X-Large" ForeColor="#009999" Width="500px"></asp:Label>
@@ -35,7 +32,7 @@
                 <asp:Label ID="txtData" runat="server" Text="Data" Font-Size="X-Large" ForeColor="black" Visible="false"></asp:Label>
                 <br />
                 <br />
-        
+
                 <asp:Label ID="lbNome" runat="server" Text="Nome: " Font-Size="X-Large" ForeColor="#009999" Width="70px"></asp:Label>
                 <asp:Label ID="txtNome" runat="server" Text="Nome" Font-Size="X-Large" ForeColor="black"></asp:Label>
                 <br />
@@ -51,7 +48,7 @@
                 <br />
                 <br />
 
-                
+
                 <asp:Label ID="lbLido" runat="server" Text="Lido: " Font-Size="X-Large" ForeColor="#009999" Width="60px"></asp:Label>
                 <asp:Label ID="txtLido" runat="server" Text="lido" ForeColor="Black" Font-Size="X-Large"></asp:Label>
                 <br />
@@ -60,18 +57,19 @@
                 <asp:Label ID="lbMensagem" runat="server" Text="Mensagem: " Font-Size="X-Large" ForeColor="#009999" Width="125px"></asp:Label>
                 <br />
                 <br />
-                <asp:Label ID="txtMensagem" runat="server" Text="Mensagem" ForeColor="black" Font-Size="X-Large" Height="100px"></asp:Label>
 
+                <asp:Label ID="txtMensagem" runat="server" Text="Mensagem" ForeColor="black" Font-Size="X-Large" Height="100px"></asp:Label>
                 <br />
-                
                 <br />
                 <br />
                 <br />
                 <br />
             </div>
         </div>
+
         <br />
         <br />
+
         <div id="imgResposta">
             <asp:Image runat="server" ImageUrl="~/img/envelope.png" Width="128px" />
         </div>
@@ -81,7 +79,6 @@
             <br />
 
             <div id="TextoResposta">
-                
                 <div id="SemMensagemFunc">
                     <br />
                     <br />
@@ -108,8 +105,5 @@
         <div id="imgFunc">
             <asp:Image runat="server" ImageUrl="~/img/telemarketer.png" Width="128px" />
         </div>
-
     </div>
-
 </asp:Content>
-

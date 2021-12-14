@@ -1,14 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/page/MasterPage.master" AutoEventWireup="true" CodeFile="planos.aspx.cs" Inherits="page_planos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-
     <link rel="stylesheet" type="text/css" href="../css/estilo.css" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <script type="text/javascript" src="../js/JavaScript.js"></script>
-
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <br />
     <br />
 
@@ -27,6 +25,4 @@
     <div id="foto3">
         <asp:Image runat="server" ImageUrl="~/img/academia.png" Height="250px" Width="60%" />
     </div>
-
 </asp:Content>
-

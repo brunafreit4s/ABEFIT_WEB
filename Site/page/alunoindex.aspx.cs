@@ -2,7 +2,6 @@
 using System.Data;
 using System.Data.SqlClient;
 
-
 public partial class page_alunoindex : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
@@ -10,10 +9,10 @@ public partial class page_alunoindex : System.Web.UI.Page
         if (Session["logado"] == null)
         {
             Response.Redirect("index.aspx");
-
         }
+
         if (Session["logado"] != null)
-        {   
+        {
             Conexao c = new Conexao();
             c.conectar();
             String sql = "select Nome_Aluno,CPF_Aluno,RG_Aluno,email_Aluno,tel_Celular_Aluno,tel_Resid_Aluno,convert (char(10),Data_Nascimento_Aluno,101)[Data_Nascimento_Aluno],Rua_Aluno,Numero_Aluno,Complemento_Aluno,Bairro_Aluno,CEP_Aluno,Cidade_Aluno,UF_Aluno from Aluno where email_Aluno like '" + Session["email"] + "'";
@@ -23,6 +22,7 @@ public partial class page_alunoindex : System.Web.UI.Page
             dAdapter.SelectCommand = c.command;
             dAdapter.Fill(dt);
             c.fechaConexao();
+
             Session["nome"] = dt.Tables[0].DefaultView[0].Row["Nome_Aluno"];
             Session["CPF"] = dt.Tables[0].DefaultView[0].Row["CPF_Aluno"];
             Session["RG"] = dt.Tables[0].DefaultView[0].Row["RG_Aluno"];
@@ -53,9 +53,9 @@ public partial class page_alunoindex : System.Web.UI.Page
             lbCep.Text = Session["CEP"].ToString();
             lbCidade.Text = Session["Cidade"].ToString();
             lbUf.Text = Session["UF"].ToString();
-
         }
-        if (Session["logado"] != null) 
+
+        if (Session["logado"] != null)
         {
             Conexao c = new Conexao();
             c.conectar();
@@ -75,9 +75,7 @@ public partial class page_alunoindex : System.Web.UI.Page
                 Session["plano"] = dt.Tables[0].DefaultView[0].Row["Planos"];
                 lbPlano.Text = Session["plano"].ToString();
             }
-
         }
-        
     }
 
     protected void simaluno_CheckedChanged(object sender, EventArgs e)
@@ -87,48 +85,46 @@ public partial class page_alunoindex : System.Web.UI.Page
             txtNovaSenha.Enabled = true;
             txtConfirmaSenha.Enabled = true;
             txtSenhaAnterior.Enabled = true;
-                         
         }
         else
         {
             txtNovaSenha.Enabled = false;
             txtConfirmaSenha.Enabled = false;
             txtSenhaAnterior.Enabled = false;
-            
         }
     }
 
     protected void enviaSenha_Click(object sender, EventArgs e)
     {
-        if (txtNovaSenha.Text == txtConfirmaSenha.Text)
-        {
+        try
+        {            
+            if (txtNovaSenha.Text == txtConfirmaSenha.Text)
+            {
+                Conexao c = new Conexao();
+                c.conectar();
+                String senha = txtNovaSenha.Text;
+                String sql = "UPDATE [Aluno] SET [senha_Aluno] =@senha where email_Aluno like '" + Session["email"] + "'";
+                c.command.Parameters.Add("@senha", SqlDbType.VarChar).Value = senha;
+                c.command.CommandText = sql;
+                c.command.ExecuteNonQuery();
+                c.fechaConexao();
 
-            Conexao c = new Conexao();
-            c.conectar();
-            String senha = txtNovaSenha.Text;
-            String sql = "UPDATE [Aluno] SET [senha_Aluno] =@senha where email_Aluno like '" + Session["email"] + "'";
-            c.command.Parameters.Add("@senha", SqlDbType.VarChar).Value = senha;
-            c.command.CommandText = sql;
-            c.command.ExecuteNonQuery();
-            c.fechaConexao();
-
-            Session.Remove("logado");
-            Response.Redirect("index.aspx");
-            
+                Session.Remove("logado");
+                Response.Redirect("index.aspx");
+            }
+            else
+            {
+                lbAvisa.Text = "As senhas não se coincidem!";
+            }
         }
-
-        else {
-            lbAvisa.Text = "As senhas não se coincidem!";
+        catch
+        {
+            lbAvisa.Text = "Senha negada! verifique os dados digitados!";
         }
     }
 
     protected void enviaCancela_Click(object sender, EventArgs e)
-    { 
-            Response.Redirect("index.aspx");
-    }
-
-    protected void txtNovaSenha_TextChanged(object sender, EventArgs e)
     {
+        Response.Redirect("index.aspx");
     }
-    
 }

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -15,6 +10,7 @@ public partial class page_medidas : System.Web.UI.Page
         {
             Response.Redirect("index.aspx");
         }
+
         if(Session["logado"] != null)
         {
             Conexao c = new Conexao();
@@ -65,6 +61,7 @@ public partial class page_medidas : System.Web.UI.Page
             lbPantDire.Text = Session["Medida_Panturrilha_D"].ToString();
             lbQuadril.Text = Session["Medida_Quadril"].ToString();
         }
+
         if (Session["logado"] != null)
         {
             Conexao c = new Conexao();
@@ -81,5 +78,4 @@ public partial class page_medidas : System.Web.UI.Page
             lbDatas.Text = Session["Data"].ToString();    
         }
     }
-
 }

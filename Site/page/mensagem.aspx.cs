@@ -1,10 +1,4 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -15,9 +9,6 @@ public partial class page_mensagem : System.Web.UI.Page
         if (Session["logado"] == null)
         {
             Response.Redirect("index.aspx");
-        }
-        else { 
-        
         }
 
         if (Session["logado"] != null)
@@ -45,9 +36,6 @@ public partial class page_mensagem : System.Web.UI.Page
                 txtEmail.Text = Session["email"].ToString();
                 txtMensagem.Text = Session["Mensagem"].ToString();
                 txtLido.Text = Session["Lido"].ToString();
-
-                
-                
             }
             else
             {
@@ -62,8 +50,6 @@ public partial class page_mensagem : System.Web.UI.Page
                 txtAssunto.Visible = false;
                 txtMensagem.Visible = false;
                 txtLido.Visible = false;
-
-                
             }
         }
 
@@ -82,10 +68,8 @@ public partial class page_mensagem : System.Web.UI.Page
             if (dt.Tables[0].DefaultView.Count > 0)
             {
                 Session["Data"] = dt.Tables[0].DefaultView[0].Row["data_Mensagem"];
-
                 txtData.Text = Session["Data"].ToString();
             }
-
             else
             {
                 lbData.Visible = false;
@@ -96,7 +80,6 @@ public partial class page_mensagem : System.Web.UI.Page
 
             }
         }
-
 
         if (Session["logado"] != null)
         {
@@ -119,22 +102,16 @@ public partial class page_mensagem : System.Web.UI.Page
                 txtNomeFunc.Text = Session["AssuntoFunc"].ToString();
                 txtMensagemFunc.Text = Session["MensagemFunc"].ToString();
                 txtDataFunc.Text = Session["Data"].ToString();
-
             }
-
             else
             {
                 lbTexto2.Visible = true;
-
-
                 lbNomeFunc.Visible = false;
                 lbMensagemFunc.Visible = false;
                 lbDataFunc.Visible = false;
-
                 txtNomeFunc.Visible = false;
                 txtMensagemFunc.Visible = false;
                 txtDataFunc.Visible = false;
-
             }
         }
     }
